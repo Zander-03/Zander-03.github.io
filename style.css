@@ -1,67 +1,127 @@
-/* Page Styling */
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Header */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-bottom: 50px;
+}
+
+/* Header styles */
 header {
-    background-color: #4a90e2;
+    background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 2rem 1rem;
 }
 
-/* Navigation Bar */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navigation styles */
 nav {
-    background-color: #333;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #34495e;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0.5rem 1rem;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #4a90e2;
+nav a:hover {
+    background-color: #2c3e50;
+    border-radius: 5px;
 }
 
-/* Sections */
+/* Section styles */
 section {
+    padding: 2rem;
     max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-h2 {
-    color: #4a90e2;
+section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
 }
 
-/* Footer */
+section h3 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: #34495e;
+}
+
+section p, section li {
+    margin-bottom: 0.6rem;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+/* Footer styles */
 footer {
     text-align: center;
-    background-color: #333;
+    padding: 1rem;
+    background-color: #2c3e50;
     color: white;
-    padding: 15px;
-    margin-top: 30px;
+    margin-top: 2rem;
+}
+
+/* Links */
+a {
+    color: #2980b9;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
 }
